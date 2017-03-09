@@ -24,8 +24,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --info false",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js --progress -p",
+    "test": "NODE_ENV=test ./node_modules/.bin/_mocha --compilers js:babel-core/register src/**/*.test.js",
     "eject": "react-scripts eject"
   },
   "description": "A new project with react babel and webpack",
